@@ -1,6 +1,7 @@
 # Motte
 
-TODO: Write a gem description
+Motte is a tool for extracting information about cases stored on BAILII,
+the database of British and Irish legal cases.
 
 ## Installation
 
@@ -18,11 +19,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Motte has a command-line interface which is, for now, the primary way of
+interacting with it; you can also use it as a library, though.
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/motte/fork )
+1. Fork it ( http://github.com/robmiller/motte/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
