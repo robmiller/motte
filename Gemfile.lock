@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     motte (0.0.1)
+      chronic (~> 0.10)
       nokogiri (~> 1.6)
       virtus (~> 1.0)
 
@@ -11,15 +12,23 @@ GEM
     axiom-types (0.0.5)
       descendants_tracker (~> 0.0.1)
       ice_nine (~> 0.9)
+    chronic (0.10.2)
+    coderay (1.1.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     descendants_tracker (0.0.3)
     equalizer (0.0.9)
     ice_nine (0.11.0)
+    method_source (0.8.2)
     mini_portile (0.5.2)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    pry (0.9.12.4)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rake (10.1.1)
+    slop (3.4.7)
     virtus (1.0.1)
       axiom-types (~> 0.0.5)
       coercible (~> 1.0)
@@ -32,4 +41,5 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.5)
   motte!
+  pry (~> 0.9)
   rake
