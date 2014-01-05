@@ -8,15 +8,17 @@ Gem::Specification.new do |spec|
   spec.version       = Motte::VERSION
   spec.authors       = ["Rob Miller"]
   spec.email         = ["rob@bigfish.co.uk"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Parser of caselaw stored on BAILII}
+  spec.description   = %q{BAILII is a database of British and Irish caselaw; this tool parses cases found there and extracts information from them.}
+  spec.homepage      = "https://github.com/robmiller/motte"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "nokogiri", "~> 1.6"
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
