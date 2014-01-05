@@ -13,12 +13,13 @@ module Motte
 
     attribute :name, String
     attribute :court, String
-    attribute :date, Date, default: Date.today
+    attribute :hearing_date, Date, default: Date.today
+    attribute :judgment_date, Date, default: Date.today
     attribute :url, String
     attribute :citations, Array[Motte::Citation]
 
     def year
-      date.year
+      judgment_date.year
     end
   end
 end

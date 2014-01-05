@@ -39,10 +39,15 @@ module Motte
       end
     end
 
-    def extract_date
+    def extract_hearing_date
       span = @doc.xpath("//b/span[starts-with(., 'On ')]").first
       date = span.text.sub(/^On /, "")
-      self.attributes[:date] = Chronic.parse(date).to_date
+      self.attributes[:hearing_date] = Chronic.parse(date).to_date
+    end
+
+    def extract_judgment_date
+      date = self.attributes[:name].scan(/\(([0-9]{1,2} \w+ [0-9]{4})\)/).last.first
+      self.attributes[:judgment_date] = Chronic.parse(date).to_date
     end
 
     def extract_court
