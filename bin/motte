@@ -5,3 +5,16 @@ Bundler.setup
 
 require "motte"
 
+url = ARGV[0]
+parser = Motte::Parser.from_url(url)
+c = parser.parse
+
+puts <<CASE_INFO
+Case: #{c.name}
+Year: #{c.year}
+Court: #{c.court}
+
+Heard on #{c.hearing_date}, judgment on #{c.judgment_date}
+
+
+CASE_INFO
