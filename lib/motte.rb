@@ -1,5 +1,4 @@
 require "motte/version"
 
-module Motte
-  # Your code goes here...
-end
+require "motte/case"
+require "motte/parser"
